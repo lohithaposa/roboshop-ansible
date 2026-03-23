@@ -12,7 +12,7 @@
   - name: Create ec2-instance
     amazon.aws.ec2_instance:
       instance_type: "t3.micro"
-      security_grp_id: "{{ sg_id }}"
+      security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
       region: us-east-1
       name: "{{ item }}-{{ env }}"
