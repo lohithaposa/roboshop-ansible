@@ -32,7 +32,7 @@
   - name: Create route53 record
     amazon.aws.route53:
       state: present
-      zone: " {{ domain_name}}"
+      zone: " {{ domain_name }}"
       record: "{{ item.item }}-{{ env }}.{{ domain_name }}" #mongodb-dev-daws.online
       type: A
       ttl: 1
